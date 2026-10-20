@@ -14,14 +14,23 @@ function Browse() {
     ];
 
   return (
-    <>
+    <div className='browse-page'>
       <div className='browse-container'>
         <h2>Browse All Categories</h2>
       </div>
       <div className='categories-grid'>
-
+        {categories.map((item,index) => (
+            <div
+              key={index}
+              className='category-card'
+              style={{ background: item.color }}
+            >
+                <span className='category-icon'>{item.icon}</span>
+                <h3 className='category-name'>{item.name}</h3>
+            </div>  
+        ))}
       </div>
-    </>
+    </div>
   )
 }
 
