@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './Component/Layout/Layout.jsx';
 import Home from './Page/Home/Home.jsx';
 import Library from './Page/Libarary/library.jsx';
+import Browse from './Page/Browse/Browse.jsx';
 import Favorites from './Page/Favorites/favorites.jsx';
 import './App.css';
 
@@ -12,6 +13,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/Browse" element={<Browse />} />
           <Route path="/favorites" element={<Favorites />} />
         </Route>
       </Routes>

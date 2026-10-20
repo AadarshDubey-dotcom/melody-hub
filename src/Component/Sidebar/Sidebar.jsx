@@ -25,6 +25,7 @@ function Sidebar() {
       <nav id="sidebar-navigation" aria-label="Main navigation">
         <ul className="nav-link">
           <li><NavLink to="/" end onClick={() => setOpen(false)}>Home</NavLink></li>
+          <li><NavLink to="/Browse" onClick={() => setOpen(false)}>Browse</NavLink></li>
           <li><NavLink to="/library" onClick={() => setOpen(false)}>Library</NavLink></li>
           <li><NavLink to="/favorites" onClick={() => setOpen(false)}>Favorites</NavLink></li>
         </ul>
