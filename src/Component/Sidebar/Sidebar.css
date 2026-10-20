@@ -1,0 +1,147 @@
+/* Base sidebar */
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 240px;
+  height: 100vh;
+  background: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 18px;
+  transition: transform 0.3s ease-in-out;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 3-dot menu icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: #343448;
+  cursor: pointer;
+  color: white;
+}
+
+.menu-icon:hover,
+.menu-icon:focus-visible {
+  background: #45455c;
+}
+
+.menu-icon:focus-visible {
+  outline: 2px solid #ff8eae;
+  outline-offset: 2px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Profile section */
+.profile {
+  padding: 4px 8px 24px;
+}
+
+.profile h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Navigation links */
+.nav-link {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link li {
+  margin: 6px 0;
+}
+
+.nav-link a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-link a:hover,
+.nav-link a.active {
+  background: #343448;
+  color: #ff8eae;
+}
+
+/* Extras section */
+.extras button {
+  margin-top: 10px;
+  width: 100%;
+  background: none;
+  border: 1px solid #555;
+  color: white;
+  padding: 9px;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 640px) {
+  .sidebar {
+    inset: auto 0 0;
+    z-index: 10;
+    width: 100%;
+    height: 60px;
+    padding: 6px 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .profile,
+  .extras {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex: none;
+  }
+
+  .nav-link {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: 10px;
+    min-width: 150px;
+    background: #343448;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .nav-link li {
+    margin: 6px 0;
+  }
+
+  .nav-link a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* When menu is open */
+  .sidebar.open .nav-link {
+    display: block;
+  }
+}
