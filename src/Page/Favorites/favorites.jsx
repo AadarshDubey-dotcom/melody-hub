@@ -1,9 +1,14 @@
+import React from "react";
+import "./Favorites.css";
+
 function Favorites() {
   return (
-    <section className="page">
-      <h1>Favorites</h1>
-      <p>Your favorite songs will appear here.</p>
-    </section>
+    <div className="favorites-page">
+      <div className="page">
+        <h1>Favorites</h1>
+        <p>Your favorite songs will appear here.</p>
+      </div>
+    </div>
   );
 }
 
